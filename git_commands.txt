@@ -1,0 +1,91 @@
+================================================================================
+BITS PILANI - SOFTWARE ENGINEERING (SE)
+ASSIGNMENT: GIT & GITHUB WORKFLOW COMMAND DOCUMENTATION
+Author: Ojas Maheshwari
+Roll Number: 2024eb02269
+Repository: https://github.com/ojasmaheshwari/bits-software-git-workflow
+================================================================================
+
+1. git init -b main
+   Initializes a new local Git repository in the current project directory and sets 
+   the default branch name to 'main'.
+
+2. git status
+   Displays the current state of the working directory and staging area, showing 
+   untracked files, modified files, staged changes, and current branch status.
+
+3. git add index.html about.html
+   Stages the specified files ('index.html' and 'about.html') into the Git staging area, 
+   preparing them to be included in the next commit.
+
+4. git commit -m "Initial commit: Set up project structure with index.html and about.html"
+   Records a snapshot of the staged changes permanently into the repository history 
+   with an informative, descriptive commit message.
+
+5. git diff index.html
+   Displays line-by-line differences between the working tree version of 'index.html' 
+   and the version currently staged or recorded in HEAD.
+
+6. git log --oneline -n 2
+   Shows a condensed commit history displaying the 2 most recent commits, formatted as 
+   a single line per commit with shortened SHA-1 hashes and commit messages.
+
+7. git branch feature
+   Creates a new isolated branch named 'feature' pointing to the current commit without 
+   switching away from the active branch.
+
+8. git branch -a
+   Lists all local and remote-tracking branches available in the repository, with an 
+   asterisk (*) indicating the currently checked-out branch.
+
+9. git checkout feature
+   Switches the active working context and HEAD pointer to the 'feature' branch to allow 
+   independent development without affecting the 'main' branch.
+
+10. git diff about.html
+    Inspects unstaged modifications made specifically to 'about.html' compared to the last 
+    commit on the active branch.
+
+11. git checkout main
+    Switches the HEAD pointer and working directory back to the primary integration branch ('main').
+
+12. git merge --no-ff feature -m "Merge branch 'feature' into main"
+    Merges the 'feature' branch history into the 'main' branch while creating an explicit 
+    merge commit (--no-ff) to clearly preserve branch history and divergence.
+
+13. git log --graph --oneline --decorate --all
+    Displays an ASCII-graph visualization of the complete commit topology across all 
+    branches, including branch pointers, tags, and merge points.
+
+14. git log -n 4 --stat
+    Displays the commit history for the last 4 commits along with file modification 
+    statistics (number of files changed, lines inserted, and lines deleted).
+
+15. git add .gitignore
+    Stages the '.gitignore' file into the index so that exclusion rules for logs (*.log) 
+    and temporary directories (temp/) are tracked by version control.
+
+16. git reset HEAD~1
+    Undoes the most recent commit by moving the HEAD pointer back by one commit while 
+    retaining the modified files in the working directory (mixed reset by default).
+
+17. git remote add origin git@github.com:ojasmaheshwari/bits-software-git-workflow.git
+    Associates the local Git repository with the remote repository hosted on GitHub under 
+    the alias 'origin'.
+
+18. git remote -v
+    Lists all configured remote repository aliases alongside their corresponding fetch 
+    and push URLs.
+
+19. git push -u origin main
+    Uploads the local 'main' branch commits to the remote GitHub repository and establishes 
+    tracking (-u) between local 'main' and 'origin/main'.
+
+20. git push -u origin feature
+    Uploads the 'feature' branch commits to GitHub and configures tracking so the branch 
+    history is publicly verifiable on GitHub.
+
+21. git branch -a -vv
+    Lists all local and remote branches in verbose mode, showing exact commit hashes, 
+    upstream tracking status (ahead/behind counts), and commit subjects.
+================================================================================
